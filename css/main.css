@@ -1,0 +1,15 @@
+
+#main_div{
+    margin: 30px auto;
+}
+
+#todo_form_div {
+    border-bottom: 1px gray solid;
+    width: 40%;
+    margin: auto;
+}
+
+#all_todo {
+    margin-top: 20px;
+}
+

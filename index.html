@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla To Do</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="container" id="main_div">
+
+        <!-- <div id="logo">
+            Our TO DO List
+        </div> -->
+
+
+        <div id="todo_form_div">
+            <form id="todo_form">
+                <div class="form-group">
+                    <label for="todoInput">Add To Do</label>
+                    <input type="text" class="form-control" id="todoInput" aria-describedby="todoHelp">
+                    <small id="todoHelp" class="form-text text-muted">Add in to do list here.</small>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <button type="submit" onclick="add_todo()" class="btn btn-primary">Add</button>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="todo_action" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="todo_action">
+                                <a class="dropdown-item" href="#" onclick="show_all()">Show All</a>
+                                <a class="dropdown-item" href="#" onclick="show_incomplete()">Show Incomplete</a>
+                                <a class="dropdown-item" href="#" onclick="show_completed()">Show Completed</a>
+                                <a class="dropdown-item" href="#" onclick="delete_completed()">Deleted Completed</a>
+                                <a class="dropdown-item" href="#" onclick="delete_all()">Deleted All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div>
+
+            <ul class="list-group" id="all_todo">
+                
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+
+<!-- Flexbox container for aligning the toasts -->
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+        <!-- Then put toasts within -->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <!-- <img src="..." class="rounded mr-2" alt="..."> -->
+            <strong class="mr-auto">Vanila To Do</strong>
+            <small>Alert</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Please enter a To-Do item.
+        </div>
+        </div>
+
+    </div>
+
+    <!-- TOAST ENDS -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/3.2.5/tinysort.js"></script>
+
+    <script src="js/main.js" ></script>
+</body>
+</html>
